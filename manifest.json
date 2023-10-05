@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "check-tab",
+    "version": "1.0.0",
+    "author": "volume02",
+    "icons": {
+        "16": "icons/16-tab.png",
+        "32": "icons/32-tab.png",
+        "128": "icons/128-tab.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["tabs", "tabGroups", "background", "webNavigation"],
+    "host_permissions": [
+        "https://developer.chrome.com/*",
+        "http://localhost:3000/*"
+    ],
+    "background": {
+        "service_worker": "service-worker.js",
+        "type": "module"
+    }
+}
